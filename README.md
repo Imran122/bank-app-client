@@ -19,38 +19,39 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Features:
 
-1. Home Page.
-   
-2. Create Account Page.
-    --Success message
-    --Add Another Account Button
-    --Cleared Create Account Form
-    --Name validation
-    --Email validation
-    --Password validation
+1. Home Page.<br/>
+    
+2. Create Account Page.<br/>
+    --Success message<br/>
 
-3. LogIn page.
+    --Add Another Account Button<br/>
+    --Cleared Create Account Form<br/>
+    --Name validation<br/>
+    --Email validation<br/>
+    --Password validation<br/>
 
-4. Create Account Page Functionality
-    -- Success message
-    --Add Another Account Button
-    --Cleared Create Account Form
-    --Name validation
-    --Email validation
-    --Password validation
+3. LogIn page.<br/>
 
-5. Deposit Page.
-   --Updated Balance
-   --Success Message
-   --Not A Number Alert
-   --Negative Deposit Alert
+4. Create Account Page Functionality<br/>
+    -- Success message<br/>
+    --Add Another Account Button<br/>
+    --Cleared Create Account Form<br/>
+    --Name validation<br/>
+    --Email validation<br/>
+    --Password validation<br/>
 
-6. Withdraw Page.
-   --Updated Balance
-   --Success Message
-   --Account Overdraft Feature
-   --Not A Number Alert
+5. Deposit Page.<br/>
+   --Updated Balance<br/>
+   --Success Message<br/>
+   --Not A Number Alert<br/>
+   --Negative Deposit Alert<br/>
 
-7. All Data Page Functionality.
-  - Track User Submissions: 
+6. Withdraw Page.<br/>
+   --Updated Balance<br/>
+   --Success Message<br/>
+   --Account Overdraft Feature<br/>
+   --Not A Number Alert<br/>
+
+7. All Data Page Functionality.<br/>
+  - Track User Submissions <br/>
 
