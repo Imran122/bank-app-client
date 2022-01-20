@@ -1,6 +1,6 @@
 # Getting Started with A Bank Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project live link [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Technology:
 
