@@ -5,7 +5,7 @@ import './Banner.css'
 import img from "../../../images/bank.png"
 const Banner = () => {
     return (
-        <>
+        <div>
             <Card
                 txtcolor="black"
                 header="BadBank Landing Module"
@@ -13,7 +13,7 @@ const Banner = () => {
                 text="You can move around using the navigation bar."
                 body={(<img src={img} className="img-fluid" alt="Responsive image" />)}
             />
-        </>
+        </div>
     );
 };
 
