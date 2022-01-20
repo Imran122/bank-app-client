@@ -36,14 +36,14 @@ const CreateAccount = () => {
         setShow(true);
     }
     return (
-        <div>
+        <div >
             <Navbar></Navbar>
             <Card
                 bgcolor="primary"
                 header="Create Account"
                 status={status}
                 body={show ? (
-                    <>
+                    <div >
                         Name<br />
                         <input type="input" className="form-control" id="name" placeholder="Enter name" value={name} onChange={e => setName(e.currentTarget.value)} /><br />
                         Email address<br />
@@ -51,7 +51,7 @@ const CreateAccount = () => {
                         Password<br />
                         <input type="password" className="form-control" id="password" placeholder="Enter password" value={password} onChange={e => setPassword(e.currentTarget.value)} /><br />
                         <button type="submit" className="btn btn-light" onClick={handleCreate}>Create Account</button>
-                    </>
+                    </div>
                 ) : (
                     <>
                         <h5>Success</h5>
