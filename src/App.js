@@ -1,10 +1,10 @@
 
 import './App.css';
 import {
-  BrowserRouter,
-  Routes,
+  BrowserRouter as Router,
+  Switch,
   Route,
-  Navigate
+  Link
 } from "react-router-dom";
 import HomeMain from './components/Home/HomeMain/HomeMain';
 import CreateAccount from './components/CreateAccount/CreateAccount';
@@ -15,18 +15,35 @@ import LogIn from './components/LogIn/LogIn';
 function App() {
   return (
     <div>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/*" element={<Navigate to="/home" />} />
-          <Route path="/home" element={<HomeMain />} />
-          <Route path="/create-account" element={<CreateAccount />} />
-          <Route path="/deposit" element={<Deposit />} />
-          <Route path="/withdraw" element={<Withdraw />} />
-          <Route path="/alldata" element={<AllData />} />
-          <Route path="/login" element={<LogIn />} />
+      <Router>
 
-        </Routes>
-      </BrowserRouter>
+        <Switch>
+          <Route exact path="/">
+            <HomeMain></HomeMain>
+          </Route>
+
+          <Route path="/home">
+            <HomeMain></HomeMain>
+          </Route>
+          <Route path="/create-account">
+            <CreateAccount></CreateAccount>
+          </Route>
+          <Route path="/deposit">
+            <Deposit ></Deposit>
+          </Route>
+          <Route path="/withdraw">
+            <Withdraw ></Withdraw>
+          </Route>
+          <Route path="/allData">
+            <AllData ></AllData>
+          </Route>
+
+        </Switch>
+
+      </Router>
+
+
+
 
     </div>
   );
