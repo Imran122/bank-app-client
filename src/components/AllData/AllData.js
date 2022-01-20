@@ -17,7 +17,7 @@ const AllData = () => {
                 body={(
 
                     <>
-                        <h4>All data table</h4><br />
+                        <h4>All Data Table</h4><br />
                         <table>
                             <tr>
                                 <th>Company</th>
