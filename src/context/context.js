@@ -1,5 +1,6 @@
 
 import React, { createContext } from 'react';
+import './context.css';
 import {
     BrowserRouter as Router,
     Switch,
@@ -16,8 +17,8 @@ function Card(props) {
     }
 
     return (
-        <div className={classes()} style={{ maxWidth: "18rem" }}>
-            <div className="card-header">{props.header}</div>
+        <div className={classes()}>
+            <div className="card-header form-section-title">{props.header}</div>
             <div className="card-body">
                 {props.title && (<h5 className="card-title">{props.title}</h5>)}
                 {props.text && (<p className="card-text">{props.text}</p>)}

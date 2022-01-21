@@ -1,33 +1,50 @@
 import React from 'react';
 import Card from '../../context/context';
-import Footer from '../Shared/Footer/Footer';
-import Navbar from '../Shared/Navbar/Navbar';
-import './Deposit.css'
+import './Deposit.css';
+import '../../css/form.css';
 const Deposit = () => {
     const [show, setShow] = React.useState(true);
     const [status, setStatus] = React.useState('');
     const [deposit, setDeposit] = React.useState('');
     return (
-        <div>
-            <Navbar></Navbar>
-            <Card
-                bgcolor="primary"
-                header="Deposit"
-                status={status}
-                body={(
-
-                    <>
-                        <h4>Deposit Amount</h4><br />
-                        <input type="input" className="form-control" id="name" placeholder="Enter nvalue" value={deposit} onChange={e => setDeposit(e.currentTarget.value)} /><br />
-
-
-                        <button type="submit" className="btn btn-light" >Deposit</button>
-                    </>
-                )}
-
-            />
-            <Footer></Footer>
-        </div>
+        <section>
+            <div className="container">
+                <div className="form-wrapper mx-auto">
+                    <Card
+                        bgcolor=""
+                        header="Deposit"
+                        status={status}
+                        body={(
+                            <div className='form-area'>
+                                {/* Deposit Success Message */}
+                                <div className="success-message-wrapper text-center">
+                                    <h4 className='success-message'>Deposit Success Message</h4>
+                                </div>
+                                <div className="d-flex align-items-center justify-content-between">
+                                    <div className="balance-info-text">
+                                        <h3>Balance:</h3>
+                                    </div>
+                                    <div className="balance-info-text">
+                                        <h3>$10000</h3>
+                                    </div>
+                                </div>
+                                <div className="balance-info-text">
+                                    <h3>Deposit Amount</h3>
+                                </div>
+                                <form className='form'>
+                                    <div className="mb-4">
+                                        <input type="text" className="" id="name" placeholder="Enter Value *" value={deposit} onChange={e => setDeposit(e.currentTarget.value)} />
+                                    </div>
+                                    <div className="">
+                                        <button type="submit" className="submit-btn">Deposit</button>
+                                    </div>
+                                </form>
+                            </div>
+                        )}
+                    />
+                </div>
+            </div>
+        </section>
     );
 };
 

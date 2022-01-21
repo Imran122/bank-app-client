@@ -1,0 +1,33 @@
+footer {
+	background-color: #212529;
+}
+
+.footer-content {
+	padding: 40px 0 15px;
+}
+
+.footer-title {
+	color: #FFFFFF;
+	font-size: 25px;
+	font-style: italic;
+}
+
+.copyright-text {
+	position: relative;
+	padding: 17px 0 3px;
+}
+
+.copyright-text::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background-color: rgba(175, 179, 214, .2);
+}
+
+.copyright-text p {
+	color: #00AA55;
+
+}
