@@ -1,67 +1,53 @@
 import React from 'react';
 import Card from '../../context/context';
-import Footer from '../Shared/Footer/Footer';
-import Navbar from '../Shared/Navbar/Navbar';
-import './AllData.css'
+import './AllData.css';
 const AllData = () => {
     const [show, setShow] = React.useState(true);
     const [status, setStatus] = React.useState('');
     const [deposit, setDeposit] = React.useState('');
     return (
-        <div>
-            <Navbar></Navbar>
-            <Card
-                bgcolor="primary"
-                header="All Data"
-                status={status}
-                body={(
-
-                    <>
-                        <h4>All data table</h4><br />
-                        <table>
-                            <tr>
-                                <th>Company</th>
-                                <th>Contact</th>
-                                <th>Country</th>
-                            </tr>
-                            <tr>
-                                <td>Alfreds Futterkiste</td>
-                                <td>Maria Anders</td>
-                                <td>Germany</td>
-                            </tr>
-                            <tr>
-                                <td>Centro comercial Moctezuma</td>
-                                <td>Francisco Chang</td>
-                                <td>Mexico</td>
-                            </tr>
-                            <tr>
-                                <td>Ernst Handel</td>
-                                <td>Roland Mendel</td>
-                                <td>Austria</td>
-                            </tr>
-                            <tr>
-                                <td>Island Trading</td>
-                                <td>Helen Bennett</td>
-                                <td>UK</td>
-                            </tr>
-                            <tr>
-                                <td>Laughing Bacchus Winecellars</td>
-                                <td>Yoshi Tannamuri</td>
-                                <td>Canada</td>
-                            </tr>
-                            <tr>
-                                <td>Magazzini Alimentari Riuniti</td>
-                                <td>Giovanni Rovelli</td>
-                                <td>Italy</td>
-                            </tr>
-                        </table>
-                    </>
-                )}
-
-            />
-            <Footer></Footer>
-        </div>
+        <section>
+            <div className="container data-wrapper">
+                <Card
+                    bgcolor=""
+                    header="All Data"
+                    status={status}
+                    body={(
+                        <div className='table-data shadow table-responsive'>
+                            <table class="table-content rounded mb-0 table table-hover table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Password</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Jane Doe</td>
+                                        <td>john@msn.com</td>
+                                        <td>Access123</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Peter Parker</td>
+                                        <td>peter@mit.edu</td>
+                                        <td> Passcode321</td>
+                                    </tr>
+                                    <tr>
+                                        <td>John Smith</td>
+                                        <td>john@msn.com</td>
+                                        <td>Letmein33</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    )}
+                />
+            </div>
+        </section>
     );
 };
 
 export default AllData;
+
+

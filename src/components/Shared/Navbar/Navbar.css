@@ -1,0 +1,132 @@
+header {
+	padding: 20px 0;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+header nav {
+	position: relative;
+}
+
+.logo h4 {
+	font-family: 'Roboto-700';
+	font-size: 27px;
+	margin-bottom: 0 !important;
+	color: #00AA55;
+	font-style: italic;
+}
+
+.main-menu ul {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.main-menu ul li:not(:last-child) {
+	margin-right: 40px;
+}
+
+.main-menu ul li a {
+	font-family: 'Roboto-500';
+	font-size: 17px;
+	color: #23085A;
+	word-spacing: 5px;
+	position: relative;
+	text-transform: uppercase;
+}
+
+.main-menu ul li a::after {
+	content: '';
+	position: absolute;
+	top: 110%;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 2.5px;
+	-webkit-transform: scaleX(0);
+	    -ms-transform: scaleX(0);
+	        transform: scaleX(0);
+	background: #23085A;
+	-webkit-transform-origin: bottom right;
+	    -ms-transform-origin: bottom right;
+	        transform-origin: bottom right;
+	-webkit-transition: -webkit-transform 0.4s ease-in;
+	transition: -webkit-transform 0.4s ease-in;
+	-o-transition: transform 0.4s ease-in;
+	transition: transform 0.4s ease-in;
+	transition: transform 0.4s ease-in, -webkit-transform 0.4s ease-in;
+}
+
+.main-menu ul li a:hover::after {
+	-webkit-transform: scaleX(1);
+	    -ms-transform: scaleX(1);
+	        transform: scaleX(1);
+	-webkit-transform-origin: bottom left;
+	    -ms-transform-origin: bottom left;
+	        transform-origin: bottom left;
+}
+
+
+/* 
+-----------------
+Nav Icon
+-----------------
+*/
+#check-btn {
+	display: none;
+}
+
+.nav-icon {
+	cursor: pointer;
+	display: none;
+	position: relative;
+	z-index: 99999;
+}
+
+.nav-icon div {
+	width: 35px;
+	height: 3px;
+	margin: 7px 0;
+	background: #23085A;
+}
+
+@media (max-width: 991px) {
+
+	.main-menu {
+		position: absolute;
+		left: 0;
+		top: 250%;
+		background: #23085A;
+		width: 100%;
+		padding: 30px;
+		-webkit-transition: all 0.3s linear;
+		-o-transition: all 0.3s linear;
+		transition: all 0.3s linear;
+		z-index: 9999;
+		visibility: hidden;
+		opacity: 0;
+	}
+
+	.main-menu ul li:not(:last-child) {
+		margin-right: 0;
+		margin-bottom: 17px;
+	}
+
+	.main-menu ul li a {
+		color: #FFFFFF;
+		font-size: 15px;
+	}
+
+	.main-menu ul li a::after {
+		background: transparent;
+	}
+
+	.nav-icon {
+		display: block;
+	}
+	
+	#check-btn:checked ~ .main-menu {
+		top: 155%;
+		visibility: visible;
+		opacity: 1;
+	}
+}
+

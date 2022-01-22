@@ -1,8 +1,7 @@
 import React from 'react';
 import Card, { UserContext } from '../../context/context';
-import Footer from '../Shared/Footer/Footer';
-import Navbar from '../Shared/Navbar/Navbar';
-import './CreateAccount.css'
+import './CreateAccount.css';
+import '../../css/form.css';
 const CreateAccount = () => {
     const [show, setShow] = React.useState(true);
     const [status, setStatus] = React.useState('');
@@ -36,31 +35,50 @@ const CreateAccount = () => {
         setShow(true);
     }
     return (
-        <div >
-            <Navbar></Navbar>
-            <Card
-                bgcolor="primary"
-                header="Create Account"
-                status={status}
-                body={show ? (
-                    <div >
-                        Name<br />
-                        <input type="input" className="form-control" id="name" placeholder="Enter name" value={name} onChange={e => setName(e.currentTarget.value)} /><br />
-                        Email address<br />
-                        <input type="input" className="form-control" id="email" placeholder="Enter email" value={email} onChange={e => setEmail(e.currentTarget.value)} /><br />
-                        Password<br />
-                        <input type="password" className="form-control" id="password" placeholder="Enter password" value={password} onChange={e => setPassword(e.currentTarget.value)} /><br />
-                        <button type="submit" className="btn btn-light" onClick={handleCreate}>Create Account</button>
-                    </div>
-                ) : (
-                    <>
-                        <h5>Success</h5>
-                        <button type="submit" className="btn btn-light" onClick={clearForm}>Add another account</button>
-                    </>
-                )}
-            />
-            <Footer></Footer>
-        </div>
+        <section>
+            <div className="container">
+                <div className="form-wrapper mx-auto">
+                    <Card
+                    bgcolor=""
+                    header="Create Account"
+                    status={status}
+                    body={show ? (
+                            <div className='form-area'>
+                                {/* Account Create Success Message */}
+                                <div className="success-message-wrapper text-center">
+                                    <h4 className='success-message'>Account Create Success Message</h4>
+                                </div>
+                                <form>
+                                    <div className="form-field-box">
+                                        <input type="text" className="" id="name" placeholder="Enter Name *" value={name} onChange={e => setName(e.currentTarget.value)} />
+                                        {/* Form Validation Message */}
+                                        <p className="form-validation-text text-danger">Form Validation Message</p>
+                                    </div>
+                                    <div className="form-field-box">
+                                        <input type="email" className="" id="email" placeholder="Enter Email *" value={email} onChange={e => setEmail(e.currentTarget.value)} />
+                                        {/* Form Validation Message */}
+                                        <p className="form-validation-text text-danger">Form Validation Message</p>
+                                    </div>
+                                    <div className="form-field-box">
+                                        <input type="password" className="" id="password" placeholder="Enter Password *" value={password} onChange={e => setPassword(e.currentTarget.value)} />
+                                        {/* Form Validation Message */}
+                                        <p className="form-validation-text text-danger">Form Validation Message</p>
+                                    </div>
+                                    <div className="">
+                                        <button type="submit" className="submit-btn" onClick={handleCreate}>Create Account</button>
+                                    </div>
+                                </form>  
+                            </div>  
+                        ) : (
+                            <div className='form'>
+                                <h5 className='account-message form-title mb-3'>Success</h5>
+                                <button type="submit" className="submit-btn" onClick={clearForm}>Add another account</button>
+                            </div>
+                        )}
+                    />
+                </div>
+            </div>
+        </section>
     );
 };
 
