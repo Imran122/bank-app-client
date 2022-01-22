@@ -4,7 +4,7 @@ import './CreateAccount.css';
 import '../../css/form.css';
 import { useHistory } from 'react-router-dom';
 const CreateAccount = () => {
-    const [show, setShow] = useState(false);
+    const [show, setShow] = useState(true);
     const [status, setStatus] = useState(false);
     const [name, setName] = React.useState('');
     const [email, setEmail] = React.useState('');

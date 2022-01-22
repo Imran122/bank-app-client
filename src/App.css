@@ -28,6 +28,10 @@ Bacic Setup
 
 section {
 	padding: 70px 0 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
 }
 
 a,

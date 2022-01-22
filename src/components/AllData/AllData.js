@@ -17,8 +17,8 @@ const AllData = () => {
                             <table class="table-content rounded mb-0 table table-hover table-bordered">
                                 <thead>
                                     <tr>
-                                        <th scope="col">Email</th>
                                         <th scope="col">Name</th>
+                                        <th scope="col">Email</th>
                                         <th scope="col">Password</th>
                                     </tr>
                                 </thead>
