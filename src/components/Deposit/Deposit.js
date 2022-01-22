@@ -32,6 +32,10 @@ const Deposit = () => {
             /*  if not number the reload , thats why used return */
             return;
         }
+        else if (newDepositeData.amount < 0) {
+            alert("Please enter positive number")
+            return;
+        }
         let result = parseInt(newDepositeData.amount) + balance;
         const balanceTotal = document.getElementById('balance-total');
         balanceTotal.innerText = result;
