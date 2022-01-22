@@ -10,15 +10,7 @@ const CreateAccount = () => {
     const [user, setUser] = useState('');
 
 
-    /*   function validate(field, label) {
-          if (!field) {
-              setStatus('Error: ' + label);
-              setTimeout(() => setStatus(''), 3000);
-              return false;
-          }
-          return true;
-      } */
-    //change handler when type in input field
+
     const handleOnType = e => {
         const field = e.target.name;
         const value = e.target.value;
@@ -37,15 +29,10 @@ const CreateAccount = () => {
 
     }
     function handleCreate(e) {
-        /*       console.log(name, email, password);
-              if (!validate(name, 'name')) return;
-              if (!validate(email, 'email')) return;
-              if (!validate(password, 'password')) return;
-              ctx.users.push({ name, email, password, balance: 100 }); */
+
 
         const newUser = { ...user }
-        console.log("new user", newUser);
-        console.log("new user", newUser.email);
+
 
         if (newUser.name === undefined || newUser.name === '') {
             alert('Please enter name')
@@ -111,7 +98,7 @@ const CreateAccount = () => {
                             <div className='form-area'>
                                 {/* Account Create Success Message */}
                                 <div className="success-message-wrapper text-center">
-                                    <h4 className='success-message'>Account Create Success Message</h4>
+                                    {/*  <h4 className='success-message'>Account Create Success Message</h4> */}
                                 </div>
                                 <form onSubmit={handleCreate}>
                                     <div className="form-field-box">
