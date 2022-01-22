@@ -26,7 +26,7 @@ const Navbar = () => {
                     <div className="main-menu d-flex align-items-center justify-content-center flex-lg-column">
                         <ul className="text-center text-lg-end">
                             <li className="d-lg-inline-block">
-                                <NavLink to='/Home' className="d-inline-block">Home</NavLink>
+                                <NavLink to='/' className="d-inline-block">Home</NavLink>
                             </li>
                             <li className="d-lg-inline-block">
                                 <NavLink to='/create-account' className="d-inline-block">Create Account</NavLink>

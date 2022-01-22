@@ -70,7 +70,7 @@ const CreateAccount = () => {
                                 </form>  
                             </div>  
                         ) : (
-                            <div className='form'>
+                            <div className='form another-btn'>
                                 <h5 className='account-message form-title mb-3'>Success</h5>
                                 <button type="submit" className="submit-btn" onClick={clearForm}>Add another account</button>
                             </div>
