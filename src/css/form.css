@@ -44,7 +44,7 @@ Form Input & Form Button Style
 	border: 2px solid #87898a;
 }
 
-.form-area form .submit-btn {
+.submit-btn {
 	font-family: 'Roboto-500';
 	background-color: #23085A;
 	color: #FFFFFF;
@@ -53,7 +53,7 @@ Form Input & Form Button Style
 }
 
 .form-area form :is(input, input::placeholder),
-.form-area form .submit-btn {
+.submit-btn {
 	width: 100%;
 	font-size: 16px;
 	padding: 14px;
@@ -67,7 +67,7 @@ Form Input & Form Button Style
 	transition: all 0.3s ease-in-out;
 }
 
-.form-area form .submit-btn:hover {
+.submit-btn:hover {
 	background-color: #00AA55;
 }
 
