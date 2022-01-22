@@ -16,13 +16,13 @@ const Navbar = () => {
 
                     {/* Nav Icon */}
                     <input type="checkbox" name="" id="check-btn" />
-                    <label for="check-btn" class="nav-icon">
+                    <label htmlFor="check-btn" className="nav-icon">
                         <div></div>
                         <div></div>
                         <div></div>
                     </label>
 
-                    {/* MAIN MENU  */} 
+                    {/* MAIN MENU  */}
                     <div className="main-menu d-flex align-items-center justify-content-center flex-lg-column">
                         <ul className="text-center text-lg-end">
                             <li className="d-lg-inline-block">

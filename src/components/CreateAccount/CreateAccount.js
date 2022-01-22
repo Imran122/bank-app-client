@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Card, { UserContext } from '../../context/context';
 import './CreateAccount.css';
 import '../../css/form.css';
-import { useHistory } from 'react-router-dom';
+
 const CreateAccount = () => {
     const [show, setShow] = useState(true);
     const [status, setStatus] = useState(false);

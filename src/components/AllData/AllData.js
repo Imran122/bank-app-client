@@ -19,7 +19,7 @@ const AllData = () => {
 
                     body={(
                         <div className='table-data shadow table-responsive'>
-                            <table class="table-content rounded mb-0 table table-hover table-bordered">
+                            <table className="table-content rounded mb-0 table table-hover table-bordered">
                                 <thead>
                                     <tr>
                                         <th scope="col">Name</th>
@@ -29,7 +29,7 @@ const AllData = () => {
                                 </thead>
                                 <tbody>
                                     {users.map(user =>
-                                        <tr>
+                                        <tr key={user._id}>
                                             <td>{user.name}</td>
                                             <td>{user.email}</td>
                                             <td>{user.password}</td>
