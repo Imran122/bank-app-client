@@ -31,7 +31,7 @@ const Navbar = () => {
                     <div className="main-menu ">
                         <ul className="text-center text-lg-end ">
                             <li className="d-lg-inline-block">
-                                <NavLink to='/' className="d-inline-block " activeStyle={activeStyle} >Home</NavLink>
+                                <NavLink to='/home' className="d-inline-block " activeStyle={activeStyle} >Home</NavLink>
                                 {/* nav item hover pop up description  */}
                                 <div className="page-description">
                                     <p>This is home. Here is a welcome message of the badbank.</p>
