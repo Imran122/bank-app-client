@@ -1,5 +1,6 @@
 header {
   padding: 20px 0;
+
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
     rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
@@ -33,7 +34,45 @@ header nav {
   position: relative;
   text-transform: uppercase;
 }
+/* 
+----------------------------------------
+nav item hover pop up description style
+-----------------------------------------
+*/
+.main-menu ul li {
+  position: relative;
+}
 
+.page-description {
+  text-align: left;
+  position: absolute;
+  top: 265%;
+  right: 50%;
+  transform: translateX(50%);
+  width: 400px;
+  padding: 20px;
+  background-color: #ffff;
+  z-index: 999999;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s linear;
+  border-top: 3px solid #00aa55;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.page-description p {
+  margin-bottom: 0 !important;
+}
+.main-menu ul li:hover .page-description {
+  top: 196%;
+  visibility: visible;
+  opacity: 1;
+}
+/* 
+----------------------------------------
+nav item animated underline
+-----------------------------------------
+*/
 .main-menu ul li a::after {
   content: "";
   position: absolute;
@@ -65,6 +104,10 @@ header nav {
   transform-origin: bottom left;
 }
 
+/* .active {
+  color: #00aa55 !important;
+} */
+
 /* 
 -----------------
 Nav Icon
@@ -92,17 +135,17 @@ Nav Icon
   .main-menu {
     position: absolute;
     left: 0;
-    top: 155%;
+    top: 200%;
     background: #23085a;
     width: 100%;
-    height: 0px;
-    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    padding: 30px 10px;
     -webkit-transition: all 0.3s linear;
     -o-transition: all 0.3s linear;
     transition: all 0.3s linear;
     z-index: 9999;
   }
-
   .main-menu ul li:not(:last-child) {
     margin-right: 0;
     margin-bottom: 17px;
@@ -112,7 +155,9 @@ Nav Icon
     color: #ffffff;
     font-size: 15px;
   }
-
+  .page-description {
+    width: 100%;
+  }
   .main-menu ul li a::after {
     background: transparent;
   }
@@ -122,6 +167,8 @@ Nav Icon
   }
 
   #check-btn:checked ~ .main-menu {
-    height: 250px;
+    visibility: visible;
+    opacity: 1;
+    top: 155%;
   }
 }

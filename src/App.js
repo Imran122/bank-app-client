@@ -22,7 +22,7 @@ function App() {
           <Route exact path="/">
             <HomeMain></HomeMain>
           </Route>
-          <Route path="/home">
+          <Route exact path="/home">
             <HomeMain></HomeMain>
           </Route>
           <Route path="/create-account">

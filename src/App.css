@@ -1,15 +1,15 @@
 html {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	text-rendering: optimizeLegibility;
-	scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
 }
 
 body {
- 	font-family: 'Roboto-400';
-	color: #212529;
-	line-height: 1.5;
-	overflow-x: hidden;
+  font-family: "Roboto-400";
+  color: #212529;
+  line-height: 1.5;
+  overflow-x: hidden;
 }
 
 /* 
@@ -20,33 +20,33 @@ Bacic Setup
 *,
 *::after,
 *::before {
-	margin: 0;
-	padding: 0;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 section {
-	padding: 70px 0 50px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
+  padding: 70px 0 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 a,
 span,
 label {
-	display: inline-block;
+  display: inline-block;
 }
 
 ul li {
-	list-style: none
+  list-style: none;
 }
 
 a,
 a:focus {
-	text-decoration: none !important;
+  text-decoration: none !important;
 }
 
 button:focus,
@@ -55,12 +55,12 @@ textarea:focus,
 button,
 input,
 textarea {
-	outline: 0;
-	border: 0;
+  outline: 0;
+  border: 0;
 }
 
 button {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 h1,
@@ -73,13 +73,11 @@ p,
 ol,
 ul,
 hr {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 hr {
-	opacity: 1;
-	background-color: transparent;
+  opacity: 1;
+  background-color: transparent;
 }
-
-
