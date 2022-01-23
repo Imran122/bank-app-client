@@ -3,6 +3,11 @@ import './Navbar.css';
 import { NavLink } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 const Navbar = () => {
+    const activeStyle = {
+        fontWeight: "bold",
+        color: "#00aa55"
+
+    }
     return (
         <header className=''>
             <div className="container">
@@ -26,19 +31,19 @@ const Navbar = () => {
                     <div className="main-menu d-flex align-items-center justify-content-center flex-lg-column">
                         <ul className="text-center text-lg-end">
                             <li className="d-lg-inline-block">
-                                <NavLink to='/' className="d-inline-block">Home</NavLink>
+                                <NavLink to='/' className="d-inline-block" activeStyle={activeStyle} >Home</NavLink>
                             </li>
                             <li className="d-lg-inline-block">
-                                <NavLink to='/create-account' className="d-inline-block">Create Account</NavLink>
+                                <NavLink to='/create-account' className="d-inline-block" activeStyle={activeStyle}>Create Account</NavLink>
                             </li>
                             <li className="d-lg-inline-block">
-                                <NavLink to='/deposit' className="d-inline-block">Deposit</NavLink>
+                                <NavLink to='/deposit' className="d-inline-block" activeStyle={activeStyle}>Deposit</NavLink>
                             </li>
                             <li className="d-lg-inline-block">
-                                <NavLink to='/withdraw' className="d-inline-block">Withdraw</NavLink>
+                                <NavLink to='/withdraw' className="d-inline-block" activeStyle={activeStyle}>Withdraw</NavLink>
                             </li>
                             <li className="d-lg-inline-block">
-                                <NavLink to='/allData' className="d-inline-block">All Data</NavLink>
+                                <NavLink to='/allData' className="d-inline-block" activeStyle={activeStyle}>All Data</NavLink>
                             </li>
                         </ul>
                     </div>

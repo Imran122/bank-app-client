@@ -49,7 +49,7 @@ const Withdraw = () => {
                 <div className="form-wrapper mx-auto">
                     <Card
                         bgcolor=""
-                        header="Deposit"
+                        header="Withdraw"
                         status={status}
                         body={(
                             <div className='form-area'>
