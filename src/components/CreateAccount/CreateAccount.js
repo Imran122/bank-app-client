@@ -16,7 +16,7 @@ const CreateAccount = () => {
         const value = e.target.value;
         const newUserData = { ...user };
         newUserData[field] = value;
-        console.log(newUserData);
+        console.log(newUserData.name.length);
         if (newUserData !== null && (newUserData.name.length > 0 || newUserData.email.length > 0 || newUserData.password.length > 0)) {
             document.getElementById('submitbutton').disabled = false;
         }

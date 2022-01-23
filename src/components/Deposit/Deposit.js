@@ -12,7 +12,7 @@ const Deposit = () => {
         const newDepositData = { ...deposit };
         newDepositData[field] = value;
 
-        if (newDepositData !== null) {
+        if (newDepositData !== null && newDepositData.amount.length > 0) {
             document.getElementById('submitbutton').disabled = false;
         }
         else {

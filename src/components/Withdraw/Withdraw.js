@@ -11,7 +11,7 @@ const Withdraw = () => {
         const newWithdrawData = { ...withdraw };
         newWithdrawData[field] = value;
 
-        if (newWithdrawData !== null) {
+        if (newWithdrawData !== null && newWithdrawData.amount.length > 0) {
             document.getElementById('submitbutton').disabled = false;
         }
         else {
