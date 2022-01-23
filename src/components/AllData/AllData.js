@@ -1,20 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Card from '../../context/context';
 import './AllData.css';
 const AllData = () => {
-    const [show, setShow] = React.useState(true);
-    const [status, setStatus] = React.useState('');
-    const [deposit, setDeposit] = React.useState('');
+    //set data in services
+    const [users, setUsers] = useState([])
+    //fetch data from fajedb json file
+    useEffect(() => {
+        fetch('http://localhost:5000/userListAll')
+            .then(response => response.json())
+            .then(data => setUsers(data))
+    }, [])
     return (
         <section>
             <div className="container data-wrapper">
                 <Card
                     bgcolor=""
                     header="All Data"
-                    status={status}
+
                     body={(
                         <div className='table-data shadow table-responsive'>
-                            <table class="table-content rounded mb-0 table table-hover table-bordered">
+                            <table className="table-content rounded mb-0 table table-hover table-bordered">
                                 <thead>
                                     <tr>
                                         <th scope="col">Name</th>
@@ -23,21 +28,16 @@ const AllData = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>Jane Doe</td>
-                                        <td>john@msn.com</td>
-                                        <td>Access123</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Peter Parker</td>
-                                        <td>peter@mit.edu</td>
-                                        <td> Passcode321</td>
-                                    </tr>
-                                    <tr>
-                                        <td>John Smith</td>
-                                        <td>john@msn.com</td>
-                                        <td>Letmein33</td>
-                                    </tr>
+                                    {users.map(user =>
+                                        <tr key={user._id}>
+                                            <td>{user.name}</td>
+                                            <td>{user.email}</td>
+                                            <td>{user.password}</td>
+                                        </tr>
+                                    )}
+
+
+
                                 </tbody>
                             </table>
                         </div>

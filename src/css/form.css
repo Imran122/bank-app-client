@@ -1,17 +1,17 @@
 .form-wrapper {
-	max-width: 500px;
-	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  max-width: 500px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
-.form-wrapper>*,
-.form-wrapper>*>* {
-	border: 0 !important;
+.form-wrapper > *,
+.form-wrapper > * > * {
+  border: 0 !important;
 }
 
 .form-wrapper .form-area {
-	padding: 40px 30px 30px;
-	position: relative;
-	z-index: 1;
+  padding: 40px 30px 30px;
+  position: relative;
+  z-index: 1;
 }
 
 /*
@@ -20,13 +20,13 @@ Form Section Title
 -------------------------
 */
 .form-section-title {
-	font-family: 'Roboto-700';
-	text-align: center;
-	text-transform: capitalize;
-	font-size: 40px;
-	line-height: 1.3;
-	color: #23085A;
-	word-spacing: 7px;
+  font-family: "Roboto-700";
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 40px;
+  line-height: 1.3;
+  color: #23085a;
+  word-spacing: 7px;
 }
 
 /*
@@ -35,40 +35,40 @@ Form Input & Form Button Style
 ==========================================
 */
 .form-area form :is(input, input::placeholder) {
-	font-family: 'Roboto-400';
-	color: #212529;
-	border: 2px solid #ced4da;
+  font-family: "Roboto-400";
+  color: #212529;
+  border: 2px solid #ced4da;
 }
 
 .form-area form input:focus {
-	border: 2px solid #87898a;
+  border: 2px solid #87898a;
 }
 
 .submit-btn {
-	font-family: 'Roboto-500';
-	background-color: #23085A;
-	color: #FFFFFF;
-	text-transform: capitalize;
-	word-spacing: 3px;
+  font-family: "Roboto-500";
+  background-color: #23085a;
+  color: #ffffff;
+  text-transform: capitalize;
+  word-spacing: 3px;
 }
 
 .form-area form :is(input, input::placeholder),
 .submit-btn {
-	width: 100%;
-	font-size: 16px;
-	padding: 14px;
-	border-radius: 4px;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	-ms-border-radius: 4px;
-	-o-border-radius: 4px;
-	-webkit-transition: all 0.3s ease-in-out;
-	-o-transition: all 0.3s ease-in-out;
-	transition: all 0.3s ease-in-out;
+  width: 100%;
+  font-size: 16px;
+  padding: 14px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .submit-btn:hover {
-	background-color: #00AA55;
+  background-color: #00aa55;
 }
 
 /*
@@ -77,12 +77,12 @@ Deposite & Withdeaw Balane Info Title Style
 ===============================================
 */
 .balance-info-text h3 {
-	font-family: 'Roboto-700';
-	text-transform: capitalize;
-	font-size: 25px;
-	color: #23085A;
-	word-spacing: 7px;
-	margin-bottom: 25px;
+  font-family: "Roboto-700";
+  text-transform: capitalize;
+  font-size: 25px;
+  color: #23085a;
+  word-spacing: 7px;
+  margin-bottom: 25px;
 }
 
 /*
@@ -91,25 +91,24 @@ Account Create & Bank Success Message
 ==========================================
 */
 .success-message-wrapper {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	margin: auto;
-	z-index: -1;
-	display: none; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: -1;
 }
 
 .success-message,
-.account-message { 
-	font-size: 35px !important;
-	color: #00AA55 !important;
+.account-message {
+  font-size: 35px !important;
+  color: #00aa55 !important;
 }
 
 .success-message {
-	font-family: 'Roboto-500';
-	font-size: 18px !important;
+  font-family: "Roboto-500";
+  font-size: 18px !important;
 }
 
 /*
@@ -118,39 +117,42 @@ Form Validation Message
 ==========================================
 */
 .form-field-box {
-	position: relative;
-	margin-bottom: 28px;
+  position: relative;
+  margin-bottom: 28px;
 }
 .form-area p.form-validation-text {
-	font-family: 'Roboto-500';
-	font-size: 13px;
-	margin-top: 10px;
-	text-transform: capitalize;
-	position: absolute;
-	bottom: -39px;
-	left: 0;
-	display: none;
+  font-family: "Roboto-500";
+  font-size: 13px;
+  margin-top: 10px;
+  text-transform: capitalize;
+  position: absolute;
+  bottom: -39px;
+  left: 0;
+  display: none;
 }
-
+.submit-btn:disabled {
+  background-color: gray;
+}
+.submit-btn:disabled:hover {
+  background-color: gray;
+}
 /*
 ========================================== 
 Responsive Style
 ==========================================
 */
 @media (max-width: 510px) {
+  .form-wrapper > * > *:nth-child(2) {
+    padding: 20px 0 0 !important;
+  }
 
-	.form-wrapper > * > *:nth-child(2) {
-		padding: 20px 0 0 !important;
-	}	
-
-	.form-wrapper .form-area {
-		padding: 30px 20px 20px;
-	}
-	
+  .form-wrapper .form-area {
+    padding: 30px 20px 20px;
+  }
 }
 
 @media (max-width: 390px) {
-	.form-section-title {
-		font-size: 36px;
-	}
+  .form-section-title {
+    font-size: 36px;
+  }
 }

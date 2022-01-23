@@ -1,42 +1,81 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Card from '../../context/context';
 import './Withdraw.css';
 import '../../css/form.css';
 const Withdraw = () => {
-    const [show, setShow] = React.useState(true);
-    const [status, setStatus] = React.useState('');
-    const [deposit, setDeposit] = React.useState('');
+    const [status, setStatus] = useState(false);
+    const [withdraw, setwithdraw] = useState('');
+    const handleOnType = e => {
+        const field = e.target.name;
+        const value = e.target.value;
+        const newWithdrawData = { ...withdraw };
+        newWithdrawData[field] = value;
+
+        if (newWithdrawData !== null) {
+            document.getElementById('submitbutton').disabled = false;
+        }
+        else {
+            document.getElementById('submitbutton').disabled = true;
+        }
+
+
+        setwithdraw(newWithdrawData)
+    }
+
+
+    let balance = 100;
+    const handleSubmitData = (e) => {
+        const newDepositeData = { ...withdraw }
+        if (isNaN(newDepositeData.amount)) {
+            alert("Not a number. Please enter number")
+            /*  if not number the reload , thats why used return */
+            return;
+        }
+        else if (newDepositeData.amount > balance) {
+            alert("Please enter below amount of balance")
+            return;
+        }
+        let result = balance - parseInt(newDepositeData.amount);
+        const balanceTotal = document.getElementById('balance-total');
+        balanceTotal.innerText = result;
+        setStatus(true)
+        e.preventDefault();
+
+
+    }
     return (
         <section>
             <div className="container">
                 <div className="form-wrapper mx-auto">
                     <Card
                         bgcolor=""
-                        header="Deposit"
+                        header="Withdraw"
                         status={status}
                         body={(
                             <div className='form-area'>
                                 {/* Withdeaw Success Message */}
                                 <div className="success-message-wrapper text-center">
-                                    <h4 className='success-message'>Withdeaw Success Message</h4>
+                                    {status &&
+                                        <h4 className='success-message'>Amount withdraw Successfully </h4>
+                                    }
                                 </div>
                                 <div className="d-flex align-items-center justify-content-between">
                                     <div className="balance-info-text">
                                         <h3>Balance:</h3>
                                     </div>
                                     <div className="balance-info-text">
-                                        <h3>$10000</h3>
+                                        <h3>$<span id="balance-total">100</span></h3>
                                     </div>
                                 </div>
                                 <div className="balance-info-text">
-                                    <h3>Withdeaw Amount</h3>
+                                    <h3>Withdraw Amount</h3>
                                 </div>
-                                <form className='form'>
+                                <form className='form' onSubmit={handleSubmitData}>
                                     <div className="mb-4">
-                                        <input type="text" className="" id="name" placeholder="Enter Value *" value={deposit} onChange={e => setDeposit(e.currentTarget.value)} />
+                                        <input type="text" className="" id="amount" name="amount" placeholder="Enter Value *" onChange={handleOnType} />
                                     </div>
                                     <div className="">
-                                        <button type="submit" className="submit-btn">Withdraw</button>
+                                        <button type="submit" id="submitbutton" disabled="disabled" className="submit-btn">Withdraw</button>
                                     </div>
                                 </form>
                             </div>
