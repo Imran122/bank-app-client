@@ -172,3 +172,12 @@ Nav Icon
     top: 155%;
   }
 }
+
+.button-logout{
+  background: none;
+  border: none;
+  text-transform: uppercase;
+  color:#23085a;
+  font-family: "Roboto-500";
+  font-size: 17px;
+}
