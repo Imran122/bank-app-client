@@ -16,18 +16,19 @@ const useFirebase = () => {
   const auth = getAuth();
   const [isLoading, setIsLoading] = useState(true);
   const [authError, setAuthError] = useState("");
+  const [balance, setBalance] = useState(0);
 
   //register with email password
 
-  const registerUser = (email, password, name, history) => {
+  const registerUser = (email, password, name, balance, history) => {
     setIsLoading(true);
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         setAuthError("");
-        const newUser = { email, displayName: name };
+        const newUser = { email, displayName: name, balance: 0 };
         setUser(newUser);
         //save User to mongo Db
-        saveUser(email, name, "POST");
+        saveUser(email, name, balance, "POST");
         //update profile data to firebase
         updateProfile(auth.currentUser, {
           displayName: name,
@@ -86,8 +87,8 @@ const useFirebase = () => {
   };
 
   //save user to mongo DB
-  const saveUser = (email, displayName, method) => {
-    const user = { email, displayName };
+  const saveUser = (email, displayName, balance, method) => {
+    const user = { email, displayName, balance };
     fetch("http://localhost:5000/users", {
       method: method,
       headers: { "content-type": "application/json" },
@@ -102,7 +103,8 @@ const useFirebase = () => {
     loginUser,
     isLoading,
     authError,
-
+    balance,
+    setBalance,
     saveUser,
   };
 };

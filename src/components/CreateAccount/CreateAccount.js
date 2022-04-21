@@ -11,7 +11,15 @@ const CreateAccount = () => {
   const [registerData, setRegisterData] = useState({});
   // const [user, setUser] = useState('');
   const history = useHistory();
-  const { user, setUser, registerUser, isLoading, authError } = useAuth();
+  const {
+    user,
+    setUser,
+    registerUser,
+    isLoading,
+    authError,
+    balance,
+    setBalance,
+  } = useAuth();
 
   const handleOnType = (e) => {
     const field = e.target.name;
@@ -27,9 +35,10 @@ const CreateAccount = () => {
 
     setRegisterData(newUserData);
   };
+
   function handleCreate(e) {
-    const newUser = { ...registerData };
-    console.log("gfd", newUser);
+    const newUser = { ...registerData, balance };
+    console.log(newUser);
     if (newUser.name === undefined || newUser.name === "") {
       alert("Please enter name");
       e.preventDefault();
@@ -45,9 +54,10 @@ const CreateAccount = () => {
     } else {
       //submitttingconsole.log(loginData.email, loginData.password)
       registerUser(
-        registerData.email,
-        registerData.password,
-        registerData.name,
+        newUser.email,
+        newUser.password,
+        newUser.name,
+        newUser.balance,
         history
       );
 
