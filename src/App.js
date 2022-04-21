@@ -4,6 +4,7 @@ import AllData from "./components/AllData/AllData";
 import CreateAccount from "./components/CreateAccount/CreateAccount";
 import Deposit from "./components/Deposit/Deposit";
 import HomeMain from "./components/Home/HomeMain/HomeMain";
+import LogIn from "./components/LogIn/LogIn";
 import Footer from "./components/Shared/Footer/Footer";
 import Navbar from "./components/Shared/Navbar/Navbar";
 import Withdraw from "./components/Withdraw/Withdraw";
@@ -23,6 +24,9 @@ function App() {
           </Route>
           <Route path="/create-account">
             <CreateAccount></CreateAccount>
+          </Route>
+          <Route path="/login">
+            <LogIn></LogIn>
           </Route>
           <Route path="/deposit">
             <Deposit></Deposit>
