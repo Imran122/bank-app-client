@@ -1,0 +1,55 @@
+.select-item-form {
+    cursor: pointer;
+    font-size: 20px;
+    width: 100%;
+    max-width: 700px;
+    display: block;
+    margin: 0 auto;
+    padding: 10px 16px;
+    color: #212121;
+    /* vertical-align: middle; */
+    border: 0;
+    border-bottom: 1px solid #212121;
+    background-color: #FFFFFF;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1.6rem 1.2rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.select-item-form:focus {
+    outline: 0;
+}
+
+.select-item-form[multiple],
+.select-item-form[size]:not([size="1"]) {
+    padding-right: 0.75rem;
+    background-image: none;
+}
+
+.select-item-form:-moz-focusring {
+    color: transparent;
+}
+
+.select-btn-area .select-btn {
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #FFD533;
+    color: #212121;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+}
+
+.select-btn-area .select-btn:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}

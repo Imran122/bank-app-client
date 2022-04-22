@@ -25,6 +25,7 @@ const CreateAccount = () => {
     const field = e.target.name;
     const value = e.target.value;
     const newUserData = { ...registerData };
+
     newUserData[field] = value;
     //console.log(newUserData.name.length);
     if (newUserData !== null && value.length > 0) {
@@ -38,6 +39,7 @@ const CreateAccount = () => {
 
   function handleCreate(e) {
     const newUser = { ...registerData, balance: 0 };
+
     console.log(newUser);
     if (newUser.name === undefined || newUser.name === "") {
       alert("Please enter name");
@@ -58,10 +60,12 @@ const CreateAccount = () => {
         newUser.password,
         newUser.name,
         newUser.balance,
+        newUser.accountType,
         history
       );
 
       e.preventDefault();
+
       /*   fetch('http://localhost:5000/userList', {
                 method: 'POST',
                 headers: {
@@ -126,6 +130,18 @@ const CreateAccount = () => {
                       <p className="form-validation-text text-danger">
                         Form Validation Message
                       </p>
+                    </div>
+                    {/*  drop down work */}
+                    <div className="form-field-box ">
+                      <select
+                        name="accountType"
+                        onChange={handleOnType}
+                        className="select-item-form w-100"
+                      >
+                        <option>Select Account Type</option>
+                        <option value="checkings">Checkings</option>
+                        <option value="savings">Savings</option>
+                      </select>
                     </div>
                     <div className="form-field-box">
                       <input
