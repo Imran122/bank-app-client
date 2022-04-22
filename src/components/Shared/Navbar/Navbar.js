@@ -91,6 +91,22 @@ const Navbar = () => {
               </li>
               <li className="d-lg-inline-block">
                 <NavLink
+                  to="/transfer"
+                  className="d-inline-block"
+                  activeStyle={activeStyle}
+                >
+                  Transfer
+                </NavLink>
+                {/* nav item hover pop up description  */}
+                <div className="page-description">
+                  <p>
+                    It is transfer page where you can transfer balance from your
+                    account to uther user account by email
+                  </p>
+                </div>
+              </li>
+              <li className="d-lg-inline-block">
+                <NavLink
                   to="/allData"
                   className="d-inline-block"
                   activeStyle={activeStyle}

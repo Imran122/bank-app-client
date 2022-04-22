@@ -8,6 +8,7 @@ import LogIn from "./components/LogIn/LogIn";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Footer from "./components/Shared/Footer/Footer";
 import Navbar from "./components/Shared/Navbar/Navbar";
+import Transfer from "./components/Transfer/Transfer";
 import Withdraw from "./components/Withdraw/Withdraw";
 import AuthProvider from "./context/AuthProvider";
 import "./fonts/fonts.css";
@@ -34,6 +35,9 @@ function App() {
           </PrivateRoute>
           <PrivateRoute path="/withdraw">
             <Withdraw></Withdraw>
+          </PrivateRoute>
+          <PrivateRoute path="/transfer">
+            <Transfer></Transfer>
           </PrivateRoute>
           <Route path="/allData">
             <AllData></AllData>
