@@ -59,7 +59,7 @@ const Deposit = () => {
       parseInt(newDepositeData.amount) + parseInt(logUserData.balance);
     //const balanceTotal = document.getElementById("balance-total");
     //balanceTotal.innerText = result;
-    console.log("jogfol result", result);
+
     setStatus(true);
     setMyBalance(result);
     const mydata = {

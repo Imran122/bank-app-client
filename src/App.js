@@ -32,9 +32,9 @@ function App() {
           <PrivateRoute path="/deposit">
             <Deposit></Deposit>
           </PrivateRoute>
-          <Route path="/withdraw">
+          <PrivateRoute path="/withdraw">
             <Withdraw></Withdraw>
-          </Route>
+          </PrivateRoute>
           <Route path="/allData">
             <AllData></AllData>
           </Route>
