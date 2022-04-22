@@ -37,7 +37,7 @@ const CreateAccount = () => {
   };
 
   function handleCreate(e) {
-    const newUser = { ...registerData, balance };
+    const newUser = { ...registerData, balance: 0 };
     console.log(newUser);
     if (newUser.name === undefined || newUser.name === "") {
       alert("Please enter name");

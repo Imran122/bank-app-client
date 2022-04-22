@@ -16,8 +16,8 @@ const useFirebase = () => {
   const auth = getAuth();
   const [isLoading, setIsLoading] = useState(true);
   const [authError, setAuthError] = useState("");
-  const [balance, setBalance] = useState(0);
-
+  const [balance, setBalance] = useState("");
+  const [logUserData, setLogUserData] = useState([]);
   //register with email password
 
   const registerUser = (email, password, name, balance, history) => {
@@ -61,16 +61,14 @@ const useFirebase = () => {
 
   //if user chnage state then it will save auth data
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
+    const unsubscribed = onAuthStateChanged(auth, (user) => {
       if (user) {
-        const uid = user.uid;
         setUser(user);
-      } else {
-        setUser({});
-      }
+        setAuthError("");
+      } else setUser({});
       setIsLoading(false);
     });
-    return () => unsubscribe;
+    return () => unsubscribed;
   }, []);
 
   //signout function code
@@ -106,6 +104,8 @@ const useFirebase = () => {
     balance,
     setBalance,
     saveUser,
+    logUserData,
+    setLogUserData,
   };
 };
 export default useFirebase;

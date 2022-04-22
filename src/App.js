@@ -5,6 +5,7 @@ import CreateAccount from "./components/CreateAccount/CreateAccount";
 import Deposit from "./components/Deposit/Deposit";
 import HomeMain from "./components/Home/HomeMain/HomeMain";
 import LogIn from "./components/LogIn/LogIn";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Footer from "./components/Shared/Footer/Footer";
 import Navbar from "./components/Shared/Navbar/Navbar";
 import Withdraw from "./components/Withdraw/Withdraw";
@@ -28,9 +29,9 @@ function App() {
           <Route path="/login">
             <LogIn></LogIn>
           </Route>
-          <Route path="/deposit">
+          <PrivateRoute path="/deposit">
             <Deposit></Deposit>
-          </Route>
+          </PrivateRoute>
           <Route path="/withdraw">
             <Withdraw></Withdraw>
           </Route>
