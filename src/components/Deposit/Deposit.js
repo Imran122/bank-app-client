@@ -28,8 +28,6 @@ const Deposit = () => {
       .then((data) => setLogUserData(data));
   }, [myBalance]);
 
-  console.log("log in user ", logUserData);
-
   const handleOnType = (e) => {
     const field = e.target.name;
     const value = e.target.value;
@@ -44,11 +42,11 @@ const Deposit = () => {
 
     setDeposit(newDepositData);
   };
-  console.log("depoiste amount", deposit);
+
   const handleSubmitData = (e) => {
     e.preventDefault();
     const newDepositeData = { ...deposit };
-    console.log("newdepoiste amount cpy", newDepositeData);
+
     if (isNaN(newDepositeData.amount)) {
       alert("Not a number. Please enter number");
       /*  if not number the reload , thats why used return */
@@ -68,7 +66,7 @@ const Deposit = () => {
       email: user.email,
       balance: result,
     };
-    console.log("form send data", mydata);
+
     axios
       .put(`http://localhost:5000/updatebalance/${user.email}`, mydata)
       .then((response) => {
