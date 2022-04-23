@@ -94,7 +94,7 @@ const useFirebase = () => {
   //save user to mongo DB
   const saveUser = (email, displayName, accountType, balance, method) => {
     const user = { email, displayName, accountType, balance };
-    fetch("http://localhost:5000/users", {
+    fetch("https://bankappsolution.herokuapp.com/users", {
       method: method,
       headers: { "content-type": "application/json" },
       body: JSON.stringify(user),

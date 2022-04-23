@@ -5,7 +5,7 @@ const useUserList = () => {
   const [allUsers, setallUsers] = useState([]);
   //fetch data from fajedb json file
   useEffect(() => {
-    fetch("http://localhost:5000/userListAll")
+    fetch("https://bankappsolution.herokuapp.com/userListAll")
       .then((response) => response.json())
       .then((data) => setallUsers(data));
   }, []);

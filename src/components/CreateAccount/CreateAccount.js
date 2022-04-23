@@ -66,7 +66,7 @@ const CreateAccount = () => {
 
       e.preventDefault();
 
-      /*   fetch('http://localhost:5000/userList', {
+      /*   fetch('https://bankappsolution.herokuapp.com/userList', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

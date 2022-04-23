@@ -21,7 +21,7 @@ const Transfer = () => {
   //finidng login user by email
 
   useEffect(() => {
-    fetch(`http://localhost:5000/users/${user.email}`)
+    fetch(`https://bankappsolution.herokuapp.com/users/${user.email}`)
       .then((response) => response.json())
       .then((data) => setLogUserData(data));
   }, [myBalance]);
@@ -38,7 +38,7 @@ const Transfer = () => {
   //find email where i have to transfer
   //it is depend on transfer. when transfer then it will load the input email data
   useEffect(() => {
-    fetch(`http://localhost:5000/users/${transfer.email}`)
+    fetch(`https://bankappsolution.herokuapp.com/users/${transfer.email}`)
       .then((response) => response.json())
       .then((data) => setBalanceTransferPerson(data));
   }, [transfer]);
@@ -81,12 +81,15 @@ const Transfer = () => {
     };
 
     axios
-      .put(`http://localhost:5000/transfer/${user.email}`, mydata)
+      .put(
+        `https://bankappsolution.herokuapp.com/transfer/${user.email}`,
+        mydata
+      )
       .then((response) => {
         // calling the deposite api to deposit money into the input mail address
         axios
           .put(
-            `http://localhost:5000/updatebalance/${balanceTransferPerson.email}`,
+            `https://bankappsolution.herokuapp.com/updatebalance/${balanceTransferPerson.email}`,
             updateData
           )
           .then((response) => {

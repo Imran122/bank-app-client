@@ -24,7 +24,7 @@ const Withdraw = () => {
   //finidng login user by email
 
   useEffect(() => {
-    fetch(`http://localhost:5000/users/${user.email}`)
+    fetch(`https://bankappsolution.herokuapp.com/users/${user.email}`)
       .then((response) => response.json())
       .then((data) => setLogUserData(data));
   }, [myBalance]);
@@ -68,7 +68,10 @@ const Withdraw = () => {
     };
 
     axios
-      .put(`http://localhost:5000/withdraw/${user.email}`, mydata)
+      .put(
+        `https://bankappsolution.herokuapp.com/withdraw/${user.email}`,
+        mydata
+      )
       .then((response) => {
         console.log("loguser balance", response.data);
         e.target.reset();

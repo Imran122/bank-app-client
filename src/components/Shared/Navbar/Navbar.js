@@ -130,6 +130,9 @@ const Navbar = () => {
                   >
                     LogOut
                   </button>
+                  <p className="d-inline-block username-log">
+                    {user.displayName}
+                  </p>
                 </li>
               ) : (
                 <li className="d-lg-inline-block">
